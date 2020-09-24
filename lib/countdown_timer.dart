@@ -168,47 +168,55 @@ class _CountDownState extends State<CountdownTimer> {
     }
     if (diffDate.days != -1) {
       var days = _getNumberAddZero(diffDate.days);
-      list.add(Text(
-        '${days ?? widget.defaultDays}',
-        style: _getTextStyle(widget.daysTextStyle),
-      ));
-      list.add(Text(
-        widget.daysSymbol,
-        style: _getTextStyle(widget.daysSymbolTextStyle),
-      ));
+      list.add(
+          Column(children: <Widget>[
+            Text(
+              '${days ?? widget.defaultDays}',
+              style: _getTextStyle(widget.daysTextStyle),
+            ),
+            Text(
+              widget.daysSymbol,
+              style: _getTextStyle(widget.daysSymbolTextStyle),
+            )]));
     }
     if (diffDate.hours != -1) {
       var hours = _getNumberAddZero(diffDate.hours);
-      list.add(Text(
-        '${hours ?? widget.defaultHours}',
-        style: _getTextStyle(widget.hoursTextStyle),
-      ));
-      list.add(Text(
-        widget.hoursSymbol,
-        style: _getTextStyle(widget.hoursSymbolTextStyle),
-      ));
+      list.add(
+          Column(children: <Widget>[
+            Text(
+              '${hours ?? widget.defaultHours}',
+              style: _getTextStyle(widget.hoursTextStyle),
+            ),
+            Text(
+              widget.hoursSymbol,
+              style: _getTextStyle(widget.hoursSymbolTextStyle),
+            )]));
     }
     if (diffDate.min != -1) {
       var min = _getNumberAddZero(diffDate.min);
-      list.add(Text(
-        '${min ?? widget.defaultMin}',
-        style: _getTextStyle(widget.minTextStyle),
-      ));
-      list.add(Text(
-        widget.minSymbol,
-        style: _getTextStyle(widget.minSymbolTextStyle),
-      ));
+      list.add(
+          Column(children: <Widget>[
+            Text(
+              '${min ?? widget.defaultMin}',
+              style: _getTextStyle(widget.minTextStyle),
+            ),
+            Text(
+              widget.minSymbol,
+              style: _getTextStyle(widget.minSymbolTextStyle),
+            )]));
     }
     if (diffDate.sec != -1) {
       var sec = _getNumberAddZero(diffDate.sec);
-      list.add(Text(
-        '${sec ?? widget.defaultSec}',
-        style: _getTextStyle(widget.secTextStyle),
-      ));
-      list.add(Text(
-        widget.secSymbol,
-        style: _getTextStyle(widget.secSymbolTextStyle),
-      ));
+      list.add(
+          Column(children: <Widget>[
+            Text(
+              '${sec ?? widget.defaultSec}',
+              style: _getTextStyle(widget.secTextStyle),
+            ),
+            Text(
+              widget.secSymbol,
+              style: _getTextStyle(widget.secSymbolTextStyle),
+            )]));
     }
     return list;
   }
